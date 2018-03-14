@@ -1,4 +1,4 @@
-{% set version = '0.1' %}
+{% set version = "0.1.1" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/bindr_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/bindr/bindr_{{ version }}.tar.gz
-  sha256: cca166612eeafd6e1c961b34aaf177f9b47f8b4bc37520e277b9920eaa8b2535
+  sha256: 7c785ca77ceb3ab9282148bcecf64d1857d35f5b800531d49483622fe67505d0
 
 build:
   number: 0
