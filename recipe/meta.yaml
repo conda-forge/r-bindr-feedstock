@@ -1,5 +1,4 @@
-{% set version = "0.1.1" %}
-
+{% set version = '0.1.1' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,28 +9,29 @@ package:
 source:
   fn: bindr_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/bindr_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/bindr/bindr_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/bindr_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/bindr/bindr_{{ version }}.tar.gz
   sha256: 7c785ca77ceb3ab9282148bcecf64d1857d35f5b800531d49483622fe67505d0
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
+  host:
     - r-base
-
   run:
     - r-base
 
 test:
   commands:
-    - $R -e "library('bindr')"  # [not win]
+    - $R -e "library('bindr')"           # [not win]
     - "\"%R%\" -e \"library('bindr')\""  # [win]
 
 about:
@@ -47,3 +47,5 @@ extra:
     - bgruening
     - daler
     - jdblischak
+    - cbrueffer
+    - dbast
