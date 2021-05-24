@@ -7,7 +7,6 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: bindr_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/bindr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bindr/bindr_{{ version }}.tar.gz
@@ -39,16 +38,10 @@ about:
   license: MIT
   summary: Provides a simple interface for creating active bindings where the bound function accepts additional arguments.
   license_family: MIT
-
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
+
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
