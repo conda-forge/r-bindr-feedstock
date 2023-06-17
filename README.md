@@ -1,11 +1,11 @@
-About r-bindr
-=============
+About r-bindr-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-bindr-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/krlmlr/bindr, https://krlmlr.github.io/bindr
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-bindr-feedstock/blob/main/LICENSE.txt)
 
 Summary: Provides a simple interface for creating active bindings where the bound function accepts additional arguments.
 
