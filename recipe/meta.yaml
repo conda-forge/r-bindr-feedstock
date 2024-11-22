@@ -1,4 +1,4 @@
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,11 +9,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bindr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bindr/bindr_{{ version }}.tar.gz
-  sha256: 7c785ca77ceb3ab9282148bcecf64d1857d35f5b800531d49483622fe67505d0
+  sha256: 521f6c60183c8c0c9a4e27a3e923349d17cbd9638dc6ba29bf803c8e840f2698
 
 build:
   noarch: generic
-  number: 1006
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
